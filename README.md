@@ -16,11 +16,11 @@ Create alerts for selected log events.
 
 **Tools & Technologies**
 
--Splunk Enterprise
--SPL (Search Processing Language)
--Apache Web Server Access Logs
--Windows 11
--Sample Web Access Logs
+- Splunk Enterprise
+- SPL (Search Processing Language)
+- Apache Web Server Access Logs
+- Windows 11
+- Sample Web Access Logs
 
 **SPL Query Used**
 
@@ -35,13 +35,7 @@ Create alerts for selected log events.
 4) index="main" source="access_30day.log"
 | table _time clientip method status uri
 
-- Used to display key information from web-server events:
-
-Timestamp
-Client IP
-HTTP method
-HTTP status code
-Requested URI
+- Used to display key information from web-server events: Timestamp, Client IP, HTTP method, HTTP status code, Requested URI
 
 **Alert Configuration**
 

@@ -8,28 +8,40 @@ The logs used in this project are sample practice logs used for learning and edu
 
 **Objectives**
 
-Learn basic SIEM operations using Splunk
-Monitor and analyze web server logs
-Search events using SPL queries
-Detect purchase-related activities
-Create automated alerts in Splunk
-Understand scheduled and real-time alerting
-Tools & Technologies Used
+Learn basic SIEM operations using Splunk Enterprise.
+Analyze Apache web server access logs using SPL queries.
+Search and investigate web activity based on client IP, HTTP method, URI, and status code.
+Search for specific web activity, such as purchase-related events, from a particular client IP.
+Create alerts for selected log events.
+
+**Tools & Technologies**
+
 Splunk Enterprise
 SPL (Search Processing Language)
+Apache Web Server Access Logs
 Windows 11
 Sample Web Access Logs
 
 **SPL Query Used**
 
-index=main "purchase" source="access_30DAY.log" sourcetype="access_combined_wcookie" | sort - count
+1) index=main "purchase" source="access_30DAY.log" sourcetype="access_combined_wcookie" | sort - count
 
-Query Explanation
-index=main → Searches logs stored in the main index
-"purchase" → Finds events containing the word purchase
-source="access_30DAY.log" → Uses the specified log file
-sourcetype="access_combined_wcookie" → Filters logs by sourcetype
-sort - count → Sorts results in descending order
+-Searches the Apache web server logs for purchase-related events using the specified source and sourcetype.
+   
+3) index="main" source="access_30day.log" clientip="87.240.128.18" "purchase"
+
+-Used to search for purchase-related events associated with a specific client IP address.
+
+4) index="main" source="access_30day.log"
+| table _time clientip method status uri
+
+-Used to display key information from web-server events:
+
+-Timestamp
+-Client IP
+-HTTP method
+-HTTP status code
+-Requested URI
 
 **Alert Configuration**
 
@@ -60,6 +72,7 @@ Search Results Screenshot
 
 How SIEM tools work
 Basic SOC analyst operations
+SPL Queries
 Log analysis techniques
 Alert configuration in Splunk
 Monitoring suspicious or important activities

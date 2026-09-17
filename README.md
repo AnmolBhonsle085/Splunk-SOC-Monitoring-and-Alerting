@@ -1,4 +1,4 @@
-**Splunk Web Log Monitoring**
+**Splunk Web Log Monitoring and Alerting**
 
 **Project Overview**
 

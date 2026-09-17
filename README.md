@@ -65,13 +65,13 @@ Security monitoring basics
 
 **This project helped in understanding:**
 
-How SIEM tools work
-Basic SOC analyst operations
-SPL Queries
-Log analysis techniques
-Alert configuration in Splunk
-Monitoring suspicious or important activities
+- How SIEM tools work
+- Basic SOC analyst operations
+- SPL Queries
+- Log analysis techniques
+- Alert configuration in Splunk
+- Monitoring suspicious or important activities
 
 **Note**
 
-The logs used in this project are sample logs used only for practice and educational purposes.
+- The logs used in this project are sample logs used only for practice and educational purposes.

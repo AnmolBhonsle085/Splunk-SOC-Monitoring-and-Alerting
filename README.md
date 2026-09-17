@@ -56,10 +56,11 @@ Security monitoring basics
 
 **Screenshots**
 
-Search Query Screenshot
-Alert Creation Screenshot
-Search Results Screenshot
-
+- Search Query Screenshots
+- Alert Creation Screenshot
+- Search Results Screenshot
+- Report
+  
 **Learning Outcome**
 
 **This project helped in understanding:**

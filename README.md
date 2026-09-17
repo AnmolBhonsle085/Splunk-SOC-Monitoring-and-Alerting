@@ -16,32 +16,32 @@ Create alerts for selected log events.
 
 **Tools & Technologies**
 
-Splunk Enterprise
-SPL (Search Processing Language)
-Apache Web Server Access Logs
-Windows 11
-Sample Web Access Logs
+-Splunk Enterprise
+-SPL (Search Processing Language)
+-Apache Web Server Access Logs
+-Windows 11
+-Sample Web Access Logs
 
 **SPL Query Used**
 
 1) index=main "purchase" source="access_30DAY.log" sourcetype="access_combined_wcookie" | sort - count
 
--Searches the Apache web server logs for purchase-related events using the specified source and sourcetype.
+- Searches the Apache web server logs for purchase-related events using the specified source and sourcetype.
    
 3) index="main" source="access_30day.log" clientip="87.240.128.18" "purchase"
 
--Used to search for purchase-related events associated with a specific client IP address.
+- Used to search for purchase-related events associated with a specific client IP address.
 
 4) index="main" source="access_30day.log"
 | table _time clientip method status uri
 
--Used to display key information from web-server events:
+- Used to display key information from web-server events:
 
--Timestamp
--Client IP
--HTTP method
--HTTP status code
--Requested URI
+Timestamp
+Client IP
+HTTP method
+HTTP status code
+Requested URI
 
 **Alert Configuration**
 

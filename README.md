@@ -27,8 +27,12 @@ Create alerts for selected log events.
 1) index=main "purchase" source="access_30DAY.log" sourcetype="access_combined_wcookie" | sort - count
 
 - Searches the Apache web server logs for purchase-related events using the specified source and sourcetype.
+
+2) index="main" source="access_30day.log" clientip="87.240.128.18" status>=400 | table _time clientip method uri status
+
+- Used to identify HTTP error responses (400+) from a specific client IP and analyze the request method, URI, and status code.
    
-3) index="main" source="access_30day.log" clientip="87.240.128.18" "purchase"
+4) index="main" source="access_30day.log" clientip="87.240.128.18" "purchase"
 
 - Used to search for purchase-related events associated with a specific client IP address.
 

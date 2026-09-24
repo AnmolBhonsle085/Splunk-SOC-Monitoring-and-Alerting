@@ -8,11 +8,12 @@ The logs used in this project are sample practice logs used for learning and edu
 
 **Objectives**
 
-Learn basic SIEM operations using Splunk Enterprise.
-Analyze Apache web server access logs using SPL queries.
-Search and investigate web activity based on client IP, HTTP method, URI, and status code.
-Search for specific web activity, such as purchase-related events, from a particular client IP.
-Create alerts for selected log events.
+- Learn basic SIEM operations using Splunk Enterprise.
+- Analyze Apache web server access logs using SPL queries.
+- Search and investigate web activity based on client IP, HTTP method, URI, and status code.
+- Analyze HTTP error responses and investigate activity from specific client IPs.
+- Search for specific web activity, such as purchase-related events, from a particular client IP.
+- Create alerts for selected log events.
 
 **Tools & Technologies**
 
